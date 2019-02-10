@@ -29,7 +29,9 @@
       <scope>provided</scope>
     </dependency>
   </dependencies>
+<!--
   <build>
     <finalName>cicddemo</finalName>
   </build>
+-->
 </project>
