@@ -1,0 +1,23 @@
+def workspace;
+
+node
+{
+    stage('checkout')
+    {
+        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'HubKey', url: 'https://github.com/trainingport/cicddemo']]])
+
+    }
+    stage('build')
+    {
+        echo "Building the software"
+    }
+    stage('unittest')
+    {
+        echo "JUnit run"
+    }
+    stage('deploy')
+    {
+        echo "Deploying to Tomcat"
+    }
+    
+}
