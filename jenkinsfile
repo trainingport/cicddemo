@@ -11,7 +11,7 @@ node
     {
         echo "Building the software"
     }
-    stage('unittest')
+    stage('junit')
     {
         echo "JUnit run"
     }
