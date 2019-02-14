@@ -1,6 +1,6 @@
 <html>
 <body>
-<h2>Hello World! Welcome to the classroom!</h2>
-  Today is Second day of Traing!
+<h2>Hello World! Welcome to the CICD Demo!</h2>
+  
 </body>
 </html>
