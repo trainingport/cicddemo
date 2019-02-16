@@ -2,7 +2,8 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.avikdeb.apps</groupId>
-  <artifactId>cicddemo</artifactId>
+  <!--artifactId>cicddemo</artifactId-->
+  <artifactId>demoapp</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
   <name>cicddemo Maven Webapp</name>
@@ -30,6 +31,7 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>cicddemo</finalName>
+    <!-- finalName>demoapp</finalName-->
+    <finalName>demoapp</finalName>
   </build>
 </project>
