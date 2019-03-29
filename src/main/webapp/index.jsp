@@ -1,6 +1,6 @@
 <html>
 <body>
-<h2>Welcome to the CICD Demo! This is now the latest version! Today is 29 March 2019</h2>
+<h2>Welcome to the CICD Demo! Today is the final day.</h2>
   
 </body>
 </html>
