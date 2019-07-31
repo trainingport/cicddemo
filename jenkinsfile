@@ -1,23 +1,15 @@
-def workspace;
-
 node
 {
     stage('checkout')
     {
-        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'HubKey', url: 'https://github.com/trainingport/cicddemo']]])
-        workspace = pwd()
+        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'trainingport-password-github', url: 'https://github.com/trainingport/cicddemo']]])
     }
-    stage('build')
+    stage('build') 
     {
-        echo "Building the software in location "+workspace
-    }
-    stage('junit')
-    {
-        echo "JUnit run"
+        bat label: '', script: 'mvn install'
     }
     stage('deploy')
     {
-        echo "Deploying to Tomcat"
+        deploy adapters: [tomcat8(credentialsId: 'tomcat8-deployer', url: 'http://localhost:8080/')], contextPath: 'demoapp', war: '**/*.war'
     }
-    
 }
