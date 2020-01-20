@@ -1,3 +1,3 @@
 # cicddemo
 
-Testing the webhook! Today is the final day!
+Welcome to the Git Training!
